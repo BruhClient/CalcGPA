@@ -1,0 +1,71 @@
+export const themes = {
+  default: {
+    primary: "#92FFAA",
+    success: "#92FFAA",
+    secondary: "#807D7D",
+    background: "#FFFFFF",
+    inverse: "#000000",
+    text: "#000000", // default text color
+    inverseText: "#FFFFFF", // text on dark or colored backgrounds
+    modal_overlay: "rgba(0,0,0,0.4)",
+    input: "#000000",
+    error: "#FF4A53",
+    stroke: "#000000",
+  },
+  pastel: {
+    primary: "#A3E4DB",
+    success: "#7AE582",
+    secondary: "#B0A8B9",
+    background: "#FDFDFD",
+    inverse: "#333333",
+    text: "#333333",
+    inverseText: "#FFFFFF",
+    modal_overlay: "rgba(0,0,0,0.3)",
+    input: "#333333",
+    error: "#FF6B6B",
+    stroke: "#C1C1C1",
+  },
+  dark: {
+    primary: "#1E90FF",
+    success: "#32CD32",
+    secondary: "#AAAAAA",
+    background: "#121212",
+    inverse: "#FFFFFF",
+    text: "#EEEEEE",
+    inverseText: "#000000",
+    modal_overlay: "rgba(0,0,0,0.6)",
+    input: "#FFFFFF",
+    error: "#FF4A4A",
+    stroke: "#333333",
+  },
+  warm: {
+    primary: "#FFB347",
+    success: "#FFCC66",
+    secondary: "#A64B2A",
+    background: "#FFF5E6",
+    inverse: "#FFFFFF",
+    text: "#333333",
+    inverseText: "#000000",
+    modal_overlay: "rgba(0,0,0,0.4)",
+    input: "#333333",
+    error: "#FF4A53",
+    stroke: "#CC8B5B",
+  },
+  neon: {
+    primary: "#00FFAB",
+    success: "#0CF574",
+    secondary: "#A0A0A0",
+    background: "#0A0A0A",
+    inverse: "#FFFFFF",
+    text: "#FFFFFF",
+    inverseText: "#000000",
+    modal_overlay: "rgba(0,0,0,0.5)",
+    input: "#FFFFFF",
+    error: "#FF073A",
+    stroke: "#0CF5FF",
+  },
+};
+
+export const pickerColor = "black";
+
+export const COLORS = themes.pastel;
