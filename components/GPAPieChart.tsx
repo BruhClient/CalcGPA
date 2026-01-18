@@ -53,21 +53,23 @@ const GPAPieChart = ({
       return [
         {
           value: 1,
-          color: COLORS.secondary, // grey
+          color: COLORS.secondary,
           text: "null",
         },
       ];
     }
 
-    const gradeCount: Record<string, number> = {};
+    // 🔥 Sum credits per grade
+    const gradeCredits: Record<string, number> = {};
 
     for (const item of classes) {
-      if (!item.grade) continue;
-      gradeCount[item.grade] = (gradeCount[item.grade] ?? 0) + 1;
+      if (!item.grade || !item.credits) continue;
+
+      gradeCredits[item.grade] = (gradeCredits[item.grade] ?? 0) + item.credits;
     }
 
-    return Object.entries(gradeCount).map(([grade, value]) => ({
-      value,
+    return Object.entries(gradeCredits).map(([grade, credits]) => ({
+      value: credits, // distributed by credits
       text: grade,
       color: getGradeColor(grade),
     }));
