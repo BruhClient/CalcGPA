@@ -211,7 +211,7 @@ const ClassModal = ({
                 { label: "C", value: "C" },
                 { label: "C-", value: "C-" },
                 { label: "D+", value: "D+" },
-                { label: "C", value: "D" },
+                { label: "D", value: "D" },
                 { label: "F", value: "F" },
               ]}
             />
