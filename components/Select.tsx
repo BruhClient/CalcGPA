@@ -22,7 +22,11 @@ export default function CustomSelect({
   return (
     <View>
       <Text style={styles.label}>{label}</Text>
-      <Picker selectedValue={value} onValueChange={onValueChange}>
+      <Picker
+        selectedValue={value}
+        onValueChange={onValueChange}
+        style={styles.label}
+      >
         {options.map((opt) => (
           <Picker.Item
             key={opt.value}

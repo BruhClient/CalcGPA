@@ -1,6 +1,7 @@
 import CourseList from "@/components/CourseList";
 import Logo from "@/components/Logo";
 import CourseModal from "@/components/modals/CourseModal";
+import { COLORS } from "@/config/colors";
 import { styles } from "@/config/styles";
 import { useCourses } from "@/hooks/useCourses";
 import { createCourseSchema } from "@/schema/create-course";
@@ -64,12 +65,12 @@ export default function Index() {
           <Text style={styles.title}>CalcGPA</Text>
         </View>
         <TouchableOpacity
-          onPress={() => router.push("/settings")}
+          onPress={() => router.push("/credits")}
           style={{
             paddingRight: 5,
           }}
         >
-          <PartyPopper />
+          <PartyPopper color={COLORS.text} />
         </TouchableOpacity>
       </View>
       <TouchableOpacity
