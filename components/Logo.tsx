@@ -1,4 +1,4 @@
-import { Calculator } from "lucide-react-native";
+import { Pyramid } from "lucide-react-native";
 import React from "react";
 import { View } from "react-native";
 const Logo = () => {
@@ -11,7 +11,7 @@ const Logo = () => {
         borderRadius: 8,
       }}
     >
-      <Calculator size={30} />
+      <Pyramid size={20} />
     </View>
   );
 };
