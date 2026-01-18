@@ -75,6 +75,14 @@ const GPAPieChart = ({
     }));
   }, [classes, isEmpty]);
 
+  const legends = useMemo(() => {
+    const grades = pieChartData.map((slice) => {
+      return slice.text;
+    });
+
+    return grades.sort();
+  }, [pieChartData]);
+
   return (
     <View style={{ alignItems: "center", gap: 12 }}>
       <PieChart
@@ -112,9 +120,9 @@ const GPAPieChart = ({
             gap: 12,
           }}
         >
-          {pieChartData.map((slice) => (
+          {legends.map((slice) => (
             <View
-              key={slice.text}
+              key={slice}
               style={{
                 flexDirection: "row",
                 alignItems: "center",
@@ -126,11 +134,11 @@ const GPAPieChart = ({
                 style={{
                   width: 16,
                   height: 16,
-                  backgroundColor: slice.color,
+                  backgroundColor: GRADE_COLORS[slice],
                   borderRadius: 4,
                 }}
               />
-              <Text style={styles.secondary}>{slice.text}</Text>
+              <Text style={styles.secondary}>{slice}</Text>
             </View>
           ))}
         </View>
